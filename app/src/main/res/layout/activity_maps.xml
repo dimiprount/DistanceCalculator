@@ -1,0 +1,86 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="50">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/hetA"
+            android:id="@+id/etLocationA"
+            android:layout_weight="49.5" />
+
+        <Button
+            android:layout_width="90sp"
+            android:layout_height="wrap_content"
+            android:text="@string/bGo"
+            android:id="@+id/bGoA"
+            android:onClick="onGoLocA"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="50">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/hetB"
+            android:id="@+id/etLocationB"
+            android:layout_weight="49.5" />
+
+        <Button
+            android:layout_width="90sp"
+            android:layout_height="wrap_content"
+            android:text="@string/bGo"
+            android:id="@+id/bGoB"
+            android:layout_weight="0.5"
+            android:onClick="onGoLocB" />
+
+    </LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        tools:layout="@layout/abc_action_bar_title_item"
+        android:layout_weight="1" />
+
+    <!-- Without the LinearLayout it doesn't show the textview and the button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tvDisDur"
+            android:textSize="30sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bDistCalc"
+        android:id="@+id/bDistCalc"
+        android:onClick="onbDistCalc" />
+
+</LinearLayout>

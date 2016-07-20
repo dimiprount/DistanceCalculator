@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Distance Calculator</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="hetA">Location A</string>
+    <string name="bGo">Go</string>
+    <string name="hetB">Location B</string>
+    <string name="bGoB">Go</string>
+    <string name="bDistCalc">Calculate Distance</string>
+    <string name="save">Save</string>
+    <string name="ssd">See saved destinations</string>
+    <string name="nView">Normal View</string>
+    <string name="hView">Hybrid View</string>
+    <string name="tView">Terrain View</string>
+    <string name="multidelete">Multidelete</string>
+</resources>

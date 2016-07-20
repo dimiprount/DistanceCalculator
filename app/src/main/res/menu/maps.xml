@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.dimiprount.distancecalculator">
+
+    <item
+        android:id="@+id/save"
+        android:title="@string/save"
+        android:orderInCategory="1"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/seeSaved"
+        android:title="@string/ssd"
+        android:orderInCategory="2"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/mtNormal"
+        android:title="@string/nView"
+        android:orderInCategory="3"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/mtHybrid"
+        android:title="@string/hView"
+        android:orderInCategory="4"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/mtTerrain"
+        android:title="@string/tView"
+        android:orderInCategory="5"
+        app:showAsAction="never" />
+
+</menu>
