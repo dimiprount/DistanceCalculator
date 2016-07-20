@@ -10,18 +10,13 @@ import android.util.SparseBooleanArray;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-/**
- * Created by dimiprount on 3/9/2015.
- */
 public class DbDatabase {
 
-    // Set up the columns of the database
     public static final String KEY_ROWID = "_id";
     public static final String KEY_LOCA = "locA";
     public static final String KEY_LOCB = "locB";
     public static final String KEY_DEST_DUR = "destDur";
 
-    // Set up the database
     public static final String DATABASE_NAME = "MapsDatabase";
     public static final String DATABASE_TABLE = "MyTable";
     public static final int DATABASE_VERSION = 1;
@@ -50,15 +45,13 @@ public class DbDatabase {
         }
     }
 
-    // Constructor
     public DbDatabase(Context c) {
         myContext = c;
-        myHelper = new DbHelper(c);        // Instantiate myHelper variable (create the object)
+        myHelper = new DbHelper(c);
     }
 
     public DbDatabase open() throws SQLException {
-        myHelper = new DbHelper(myContext); // Pass in the context because the constructor of the class takes in a context
-        // we are going to give it the context we set up in the class above
+        myHelper = new DbHelper(myContext);
         myDatabase = myHelper.getWritableDatabase();
         return this;
     }
@@ -82,7 +75,6 @@ public class DbDatabase {
         SQLiteDatabase db = myHelper.getWritableDatabase();
         Cursor c = db.rawQuery(selectQuery, null);
 
-        // looping through all rows and adding to list
         if(c.moveToFirst()){
             do{
                 Routes myRoutes = new Routes();
@@ -91,7 +83,6 @@ public class DbDatabase {
                 myRoutes.setsDestination(c.getString(2));
                 myRoutes.setsDisDur(c.getString(3));
 
-                // Adding data to list
                 routes.add(myRoutes);
             }while (c.moveToNext());
         }
