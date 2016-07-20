@@ -1,8 +1,5 @@
 package com.dimiprount.distancecalculator;
 
-/**
- * Created by dimiprount on 12/20/2015.
- */
 public class Routes {
     int id;
     String sOrigin, sDestination, sDisDur;
