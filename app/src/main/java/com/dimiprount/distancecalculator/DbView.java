@@ -17,9 +17,6 @@ import android.widget.ListView;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-/**
- * Created by dimiprount on 7/9/2015.
- */
 
 public class DbView extends FragmentActivity {
 
@@ -50,7 +47,7 @@ public class DbView extends FragmentActivity {
         lv.setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
             @Override
             public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
-                mode.setTitle("" + lv.getCheckedItemCount());       // How many items are selected
+                mode.setTitle("" + lv.getCheckedItemCount());
 
             }
 
