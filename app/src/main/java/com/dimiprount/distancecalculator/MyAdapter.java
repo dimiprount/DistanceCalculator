@@ -9,44 +9,40 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by dimiprount on 7/9/2015.
- */
 public class MyAdapter extends BaseAdapter {
     Context ctxt;
     ArrayList<Routes> myData;
 
-    // Constructor
     public MyAdapter(Context context, ArrayList<Routes> data){
         this.ctxt = context;
         this.myData = data;
     }
 
     @Override
-    public int getCount() {     // How many items are in the data set represented by this Adapter.
+    public int getCount() { 
         return myData.size();
     }
 
     @Override
-    public Object getItem(int position) {       // Get the data item associated with the specified position in the data set.
+    public Object getItem(int position) {
         return myData.get(position);
     }
 
     @Override
-    public long getItemId(int position) {       // Get the row id associated with the specified position in the list.
+    public long getItemId(int position) {
         return position;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder vh;
-        if(convertView == null){        // If the first cell is empty
+        if(convertView == null){
             LayoutInflater li = (LayoutInflater) ctxt.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = li.inflate(R.layout.list_items, parent, false);       // How it will look like
+            convertView = li.inflate(R.layout.list_items, parent, false); 
             vh = new ViewHolder(convertView);
             convertView.setTag(vh);
         }else{
-            vh = (ViewHolder)convertView.getTag();      // Recycle an existing object of holder in order not to create a new one
+            vh = (ViewHolder)convertView.getTag();
         }
 
         Routes routes = (Routes) getItem(position);
@@ -61,11 +57,11 @@ public class MyAdapter extends BaseAdapter {
     }
 
 
-    private class ViewHolder {      // Definition of the holder
+    private class ViewHolder {
         public TextView showcell;
 
         public ViewHolder(View convertView) {
-            showcell = (TextView)convertView.findViewById(R.id.tvListItems);        // Restore the result of the findViewById
+            showcell = (TextView)convertView.findViewById(R.id.tvListItems);
 
         }
     }
