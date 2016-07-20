@@ -3,10 +3,7 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         distancecalculator {
-            keyAlias 'distancecalculator'
-            keyPassword 'oDpe-1726'
-            storeFile file('/home/dimprount/AndroidStudioProjects/Myapks/distancecalculator.jks')
-            storePassword 'oDpe-1726'
+            
         }
     }
     compileSdkVersion 23
